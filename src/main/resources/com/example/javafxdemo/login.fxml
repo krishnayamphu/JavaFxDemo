@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.TestController">
    <children>
-      <Button layoutX="274.0" layoutY="187.0" mnemonicParsing="false" onAction="#hello" text="Testing Button" />
+      <Button layoutX="274.0" layoutY="187.0" mnemonicParsing="false" text="Testing Button" />
       <TextField fx:id="txtbox" layoutX="246.0" layoutY="78.0" />
       <Label layoutX="305.0" layoutY="54.0" text="Text" />
       <Button fx:id="btn" layoutX="290.0" layoutY="145.0" mnemonicParsing="false" text="hello" />

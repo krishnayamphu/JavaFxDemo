@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,10 +48,12 @@ public class ContactController {
 
     @FXML
     void about(ActionEvent event) {
-        Stage stage=(Stage) txtid.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about.fxml"));
-        Parent root= null;
+
         try {
+            final Stage stage=new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about.fxml"));
+            Parent root= null;
             root = fxmlLoader.load();
             Scene scene=new Scene(root);
             stage.setScene(scene);

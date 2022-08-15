@@ -16,6 +16,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.StringTokenizer;
 
 public class ContactController {
@@ -28,6 +31,9 @@ public class ContactController {
 
     @FXML
     private TextField txtmobile;
+
+    @FXML
+    private TextField txtsearch;
 
     @FXML
     private TableView<Contact> tbl;
@@ -171,6 +177,15 @@ public class ContactController {
             load();
         }
 
+    }
+
+    public void search(){
+        String searchName=txtsearch.getText();
+        contacts= FXCollections.observableArrayList(ContactDao.getContactsByName(searchName));
+        id.setCellValueFactory(new PropertyValueFactory<Contact, Integer>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Contact, String>("name"));
+        mobile.setCellValueFactory(new PropertyValueFactory<Contact, String>("mobile"));
+        tbl.setItems(contacts);
     }
 
 }

@@ -65,7 +65,13 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.javafxdemo/com.example.javafxdemo.HelloApplication</mainClass>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>om.example.javafxdemo/com.example.javafxdemo.ContactApp</mainClass>
+                                </manifest>
+                            </archive>
+<!--                            <mainClass>com.example.javafxdemo/com.example.javafxdemo.ContactApp</mainClass>-->
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

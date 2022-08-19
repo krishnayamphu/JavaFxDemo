@@ -68,10 +68,9 @@
                             <archive>
                                 <manifest>
                                     <addClasspath>true</addClasspath>
-                                    <mainClass>om.example.javafxdemo/com.example.javafxdemo.ContactApp</mainClass>
+                                    <mainClass>com.example.javafxdemo.ContactApp</mainClass>
                                 </manifest>
                             </archive>
-<!--                            <mainClass>com.example.javafxdemo/com.example.javafxdemo.ContactApp</mainClass>-->
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
